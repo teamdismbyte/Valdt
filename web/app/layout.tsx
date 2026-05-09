@@ -10,6 +10,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Valdt",
   description: "Launch it before you spend it. Built by founders, for founders.",
+  openGraph: {
+    title: "Valdt",
+    description: "Launch it before you spend it. Built by founders, for founders.",
+    url: "https://valdt.app",
+    siteName: "Valdt",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
