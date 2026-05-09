@@ -81,10 +81,9 @@ const StrategyChat = () => {
             {messages.filter(m => step >= m.showAt).map((msg) => (
               <motion.div
                 key={msg.id}
-                layout
                 initial={{ opacity: 0, y: 15, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.4, type: "spring", stiffness: 250, damping: 25 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className={`flex w-full ${msg.sender === 'client' ? 'justify-end' : 'justify-start'}`}
               >
                 <div className={`flex flex-col max-w-[85%]`}>
@@ -104,7 +103,6 @@ const StrategyChat = () => {
             {(step === 2 || step === 4 || step === 6) && (
               <motion.div
                 key="typing"
-                layout
                 initial={{ opacity: 0, y: 15, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
